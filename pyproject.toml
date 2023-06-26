@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "django-hexlet"
+version = "0.1.0"
+description = ""
+authors = ["SlashDimka <korolkovpro@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "django_hexlet"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+django = "^4.2"
+celery = "^5.2.7"
+django-rest-framework = "^0.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
