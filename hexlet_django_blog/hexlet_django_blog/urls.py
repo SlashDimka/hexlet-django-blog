@@ -17,9 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from hexlet_django_blog import views
+from django.urls import path, include  # <- добавлен include
+
+from hexlet_django_blog import views
 
 urlpatterns = [
     path('', views.index),
-    path('about/', views.about), # <- добавляем эту строчку
+    path('articles/', include('hexlet_django_blog.article.urls')),  # <- новая строчка
     path('admin/', admin.site.urls),
 ]
